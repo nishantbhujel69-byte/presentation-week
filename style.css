@@ -1,0 +1,465 @@
+/* ---------- General ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf7;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* ---------- Navigation ---------- */
+
+header {
+    background: #c1121f;
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    min-height: 540px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(90, 10, 20, 0.7),
+            rgba(90, 10, 20, 0.7)
+        ),
+        linear-gradient(
+            135deg,
+            #c1121f,
+            #f77f00
+        );
+}
+
+.hero-content {
+    max-width: 760px;
+    color: white;
+}
+
+.small-title,
+.section-label {
+    color: #ffd166;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    line-height: 1.1;
+
+    margin: 18px 0;
+}
+
+.hero h2 span {
+    color: #ffd166;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #f8eeee;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background: white;
+    color: #c1121f;
+
+    padding: 13px 28px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+}
+
+.hero-button:hover {
+    background: #ffd166;
+}
+
+
+/* ---------- Places ---------- */
+
+.places-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: #c1121f;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+
+    margin-top: 8px;
+}
+
+.place-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.place-card {
+    background: white;
+
+    padding: 28px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    border: 1px solid #ead7d2;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-8px);
+}
+
+.place-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.place-card h3 {
+    color: #c1121f;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.place-card p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.place-card button {
+    background: #c1121f;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.place-card button:hover {
+    background: #960e18;
+}
+
+
+/* ---------- Culture ---------- */
+
+.culture-section {
+    background: #c1121f;
+
+    color: white;
+
+    padding: 80px 30px;
+}
+
+.culture-content {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.culture-content h2 {
+    font-size: 38px;
+
+    margin: 10px 0 20px;
+}
+
+.culture-content p:not(.section-label) {
+    color: #f9dddd;
+
+    margin-bottom: 15px;
+}
+
+
+/* ---------- About ---------- */
+
+.about-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+}
+
+.about-box {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.about-box div {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ead7d2;
+
+    text-align: center;
+}
+
+.about-box h3 {
+    color: #c1121f;
+
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #666;
+}
+
+
+/* ---------- Contact ---------- */
+
+.contact-section {
+    padding: 80px 20px;
+
+    background: #fff3ef;
+}
+
+.contact-box {
+    max-width: 750px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ead7d2;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h2 {
+    font-size: 34px;
+
+    margin: 8px 0 30px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d8c5bf;
+
+    border-radius: 6px;
+
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #c1121f;
+}
+
+.send-button {
+    width: 100%;
+
+    background: #c1121f;
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 14px;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background: #960e18;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: #5c0b12;
+
+    color: #ddd;
+
+    text-align: center;
+
+    padding: 22px;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .place-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .place-container,
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}
